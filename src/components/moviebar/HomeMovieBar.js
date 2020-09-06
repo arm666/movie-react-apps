@@ -12,7 +12,7 @@ function HomeMovieBar({ url, query }) {
       {movieList !== "undefined" && movieList.length > 0 ? (
         movieList.map((val, index) => (
           <NavLink
-            to={"/movie-react-app/movie/" + val.id}
+            to={"/movie-react-apps/movie/" + val.id}
             key={"movieCard" + index}
             style={{ textDecoration: "none" }}
           >

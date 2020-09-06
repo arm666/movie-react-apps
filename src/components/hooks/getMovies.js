@@ -7,7 +7,7 @@ function useGetMovies(url, query) {
   // calls api when url changes
   useEffect(() => {
     getMovie();
-  }, [url, query]);
+  }, [ query]);
 
   // api call using axios
   const getMovie = () => {

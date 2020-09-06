@@ -10,14 +10,14 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={Combine}></Route>
-          <Route exact path="/movie-react-app" component={Combine}></Route>
-          <Route exact path="/movie-react-app/" component={Combine}></Route>
+          <Route exact path="/movie-react-apps" component={Combine}></Route>
+          <Route exact path="/movie-react-apps/" component={Combine}></Route>
           <Route
-            path="/movie-react-app/movie/:id"
+            path="/movie-react-apps/movie/:id"
             component={EachMovie}
           ></Route>
           <Route
-            path="/movie-react-app/search/:query"
+            path="/movie-react-apps/search/:query"
             component={SearchedMovie}
           ></Route>
         </Switch>

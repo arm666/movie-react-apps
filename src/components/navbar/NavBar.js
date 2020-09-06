@@ -13,7 +13,7 @@ function NavBar() {
     <div className="navbars">
       <ul>
         <li className="items appName">
-          <Link to="/movie-react-app" className="title">
+          <Link to="/movie-react-apps" className="title">
             Movie App
           </Link>
         </li>
@@ -26,7 +26,7 @@ function NavBar() {
             onChange={(e) => setInputHandle(e.target.value)}
           />
           {inputHandle.length > 0 ? (
-            <Link to={"/movie-react-app/search/" + inputHandle}>
+            <Link to={"/movie-react-apps/search/" + inputHandle}>
               <button className="btnSearch"> Search</button>
             </Link>
           ) : (
