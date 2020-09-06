@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Combine from "./components/Combine";
+import EachMovie from "./components/moviebar/EachMovie";
+import SearchedMovie from "./components/search/SearchedMovie";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Combine}></Route>
+          <Route exact path="/movie-react-app" component={Combine}></Route>
+          <Route exact path="/movie-react-app/" component={Combine}></Route>
+          <Route
+            path="/movie-react-app/movie/:id"
+            component={EachMovie}
+          ></Route>
+          <Route
+            path="/movie-react-app/search/:query"
+            component={SearchedMovie}
+          ></Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

@@ -1,0 +1,62 @@
+.moviesList {
+  height: 100%;
+  overflow: auto;
+  display: grid;
+  justify-items: center;
+  align-items: flex-start;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+
+.moviesList .movieCard {
+  position: relative;
+  cursor: pointer;
+  width: 234.5px;
+  margin: 20px 0;
+  display: grid;
+  place-items: center;
+}
+
+.moviesList .movieCard:hover {
+  transition: 0.5s;
+  background: #444;
+  transform: translateX(5px);
+  border-radius: 10px;
+}
+
+.moviesList .movieCard:hover .content {
+  transition: 0.5s;
+  transform: translateX(10px);
+}
+
+.moviesList .movieCard .vote_average {
+  position: absolute;
+  top: -15px;
+  padding: 5px 20px;
+  font-weight: bolder;
+  background: #af4600;
+  color: white;
+  border-radius: 20px;
+}
+
+.moviesList .movieCard .posterImg img {
+  height: 350px;
+  object-fit: contain;
+}
+
+.moviesList .movieCard .content {
+  width: 100%;
+  margin: 10px;
+  color: #e0dfdf;
+}
+
+.moviesList .movieCard .content .title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.moviesList .movieCard .content .genres {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}

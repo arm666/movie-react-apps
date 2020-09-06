@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+body {
+  background: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .HomePage {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .HomePage .sideBar {
+  background: #191c1f;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App .HomePage .sideBar .menus {
   display: flex;
   flex-direction: column;
+}
+
+.App .HomePage .sideBar .menus .appTitle {
+  position: relative;
+  color: #d10707;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 50px 0 30px 0;
+}
+
+.App .HomePage .sideBar .menus .appTitle::after {
+  content: " ";
+  position: absolute;
+  width: 80%;
+  height: 3px;
+  bottom: -10px;
+  left: 10%;
+  background: rgba(255, 255, 255, 0.226);
+}
+
+.App .HomePage .sideBar .menus .menu {
+  margin: 5px 0px;
+  padding: 20px 50px;
+  padding-right: 80px;
+  color: grey;
+  font-weight: 600;
+  display: flex;
+  position: relative;
+  font-size: 18px;
+}
+
+.App .HomePage .sideBar .menus .menu:hover {
+  background: #333;
+  color: red;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.App .HomePage .sideBar .menus .menuActive {
+  background: #333;
+  color: red;
+  cursor: pointer;
+  transition: 0.5s;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+@keyframes arrowAnimate {
   to {
-    transform: rotate(360deg);
+    right: 10px;
   }
+}
+
+.App .HomePage .sideBar .menus .menuActive::after {
+  position: absolute;
+  right: 20px;
+  content: url(./components/assets/arrow-right.svg);
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  animation: arrowAnimate ease-in 2s infinite;
+}
+
+.App .HomePage .homeMovieBar {
+  flex: 1;
+  background: #333;
+}
+
+.App .HomePage .homeMovieBar .navbars {
+  background: #333;
+}
+
+.App .HomePage .homeMovieBar .navbars .appName {
+  display: none;
+}
+
+.App .HomePage .homeMovieBar .navbars ul .items input {
+  flex: 1;
 }

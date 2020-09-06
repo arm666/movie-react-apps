@@ -1,0 +1,92 @@
+body {
+  background: #333;
+}
+
+.App {
+  .HomePage {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+
+    .sideBar {
+      background: rgb(25, 28, 31);
+      .menus {
+        display: flex;
+        flex-direction: column;
+        .appTitle {
+          position: relative;
+          color: rgb(209, 7, 7);
+          text-align: center;
+          font-size: 30px;
+          font-weight: bold;
+          margin: 50px 0 30px 0;
+          &::after {
+            content: " ";
+            position: absolute;
+            width: 80%;
+            height: 3px;
+            bottom: -10px;
+            left: 10%;
+            background: rgba(255, 255, 255, 0.226);
+          }
+        }
+        .menu {
+          margin: 5px 0px;
+          padding: 20px 50px;
+          padding-right: 80px;
+          color: grey;
+          font-weight: 600;
+          display: flex;
+          position: relative;
+          font-size: 18px;
+          &:hover {
+            background: #333;
+            color: red;
+            cursor: pointer;
+            transition: 0.5s;
+          }
+        }
+        .menuActive {
+          background: #333;
+          color: red;
+          cursor: pointer;
+          transition: 0.5s;
+          display: flex;
+          align-items: center;
+          @keyframes arrowAnimate {
+            to {
+              right: 10px;
+            }
+          }
+          &::after {
+            position: absolute;
+            right: 20px;
+            content: url(./components/assets/arrow-right.svg);
+            width: 20px;
+            height: 20px;
+            opacity: 1;
+            animation: arrowAnimate ease-in 2s infinite;
+          }
+        }
+      }
+    }
+    .homeMovieBar {
+      flex: 1;
+      background: #333;
+      .navbars {
+        background: #333;
+
+        .appName {
+          display: none;
+        }
+        ul {
+          .items {
+            input{
+              flex:1
+            }
+            }
+        }
+      }
+    }
+  }
+}

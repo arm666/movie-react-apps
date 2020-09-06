@@ -1,0 +1,125 @@
+.eachMovie {
+  background: #222;
+  position: relative;
+}
+
+.eachMovie .selectdMovie {
+  position: relative;
+  z-index: 1;
+}
+
+.eachMovie .selectdMovie .eachMBackImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+.eachMovie .selectdMovie .eachMBackImg img {
+  width: 100%;
+  height: 110%;
+  object-fit: fill;
+  opacity: 0.1;
+  filter: blur(6px);
+}
+
+.eachMovie .selectdMovie .posterAndInfo {
+  padding: 40px 20px 0 100px;
+  display: flex;
+}
+
+.eachMovie .selectdMovie .posterAndInfo .poster {
+  width: 268px;
+}
+
+.eachMovie .selectdMovie .posterAndInfo .poster .img img {
+  width: 268px;
+  border: 10px solid white;
+  border-radius: 5px;
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info {
+  padding: 0 80px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info .Title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info .YearAndGenre {
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info .Rating {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info .Rating::after {
+  content: " / 10";
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info .TimeAndLang {
+  margin: 20px 0;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info .TimeAndLang .Time::before {
+  content: "Run Time : ";
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info .TimeAndLang .Time::after {
+  content: " mins";
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info .TimeAndLang .Lang::before {
+  content: "Language : ";
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info .ProductionCompany {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info .ProductionCompany .title {
+  font-weight: 500;
+  color: white;
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info .ProductionCountry {
+  margin: 5px 0;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.eachMovie .selectdMovie .posterAndInfo .info .ProductionCountry .title {
+  font-weight: 500;
+  color: white;
+}
+
+.eachMovie .selectdMovie .overview {
+  margin: 20px 100px;
+  color: white;
+}
+
+.eachMovie .selectdMovie .overview .title {
+  font-weight: 600;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.eachMovie .similarMovies {
+  padding: 100px;
+}
+
+.eachMovie .similarMovies .similarMovieTitle {
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  text-decoration: underline;
+}

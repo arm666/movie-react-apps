@@ -1,0 +1,54 @@
+.navbars {
+  background: rgba(78, 78, 78, 0.295);
+  padding: 10px 0;
+  margin-bottom: 5px;
+}
+
+.navbars ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbars ul .items {
+  flex: 1;
+  display: flex;
+  padding: 0 20px;
+}
+
+.navbars ul .items input {
+  padding: 10px;
+  flex: 0.8;
+}
+
+.navbars ul .items .btnSearch {
+  width: 120px;
+  height: 100%;
+  margin: 0 10px;
+  padding: 0 20px;
+  background: #19b619;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: 1px solid transparent;
+  border: 1px solid white;
+}
+
+.navbars ul .items .btnSearch:hover {
+  background: #149414;
+}
+
+.navbars ul .appName {
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbars ul .appName .title {
+  color: #dd0303;
+}
+
+.navbars ul .appName .title:hover {
+  transition: 0.5s;
+  color: red;
+}
